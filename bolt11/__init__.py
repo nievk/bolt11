@@ -49,7 +49,7 @@ class Bolt11:
                 else:
                     amount = int(amount) * 100000000000
         tags = {
-            'payment_request' : invoice, 'amount' : amount, 'date' : data.read(35).uint,
+            'payment_request' : invoice, 'amount' : (amount if type(amount) != str else 0), 'date' : data.read(35).uint,
             'route_hints' : []
         }
 
