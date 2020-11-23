@@ -10,7 +10,7 @@ This is a [Bolt11](https://github.com/lightningnetwork/lightning-rfc/blob/master
 ## Instalation
 
 ```sh
-git clone https://github.com/nievk/bolt11 && python3 bolt11/setup.py install --user
+git clone https://github.com/nievk/bolt11 && cd bolt11 && python3 bolt11/setup.py install --user
 ```
 
 ## Start
