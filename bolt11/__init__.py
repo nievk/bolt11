@@ -62,10 +62,10 @@ class Bolt11:
                 tags['description'] = self.trim_to_bytes(tag_data).decode('utf-8')
 
             elif tag == 'h' and data_length == 52:
-                tags['description-hash'] = self.trim_to_bytes(tag_data).hex()
+                tags['description_hash'] = self.trim_to_bytes(tag_data).hex()
 
             elif tag == 'p' and data_length == 52:
-                tags['payment-hash'] = self.trim_to_bytes(tag_data).hex()
+                tags['payment_hash'] = self.trim_to_bytes(tag_data).hex()
 
             elif tag == 'x':
                 tags['expiry'] = tag_data.uint
@@ -83,8 +83,8 @@ class Bolt11:
                 while stream.pos + 408 < stream.len:
 
                     tags['route_hints'].append({
-                        'short-channel-id' : self.readable_scid(stream.read(64).intbe),
-                        'base-fee-msat' : stream.read(32).intbe,
+                        'short_channel-id' : self.readable_scid(stream.read(64).intbe),
+                        'base_fee_msat' : stream.read(32).intbe,
                         'pubkey' : stream.read(264).tobytes().hex(),
                         'cltv' : stream.read(16).intbe,
                     })
