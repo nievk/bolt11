@@ -10,7 +10,7 @@ class Bolt11:
 
     def decode(self, invoice):
 
-        hrp, data = bech32.bech32_decode(invoice)
+        hrp, data = bech32.bech32_decode(str(invoice))
 
         assert hrp != None or data != None, 'Bad bech32 checksum.'
         assert hrp.startswith('ln'), 'Does not start with ln'
