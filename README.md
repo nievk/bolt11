@@ -22,8 +22,6 @@ git clone https://github.com/nievk/bolt11 && cd bolt11 && python3 setup.py insta
 
 import bolt11
 
-bolt11 = bolt11.Bolt11()
-
 invoice = 'lnbc100n1p0mkk0lpp5g8pn6um9ezqtuc6xwfrdw5h5wzem0lsg3qna42p23c2z9gdha59qdqqxq9p5hsqrzjqtqkejjy2c44jrwj08y5ygqtmn8af7vscwnflttzpsgw7tuz9r40lrdu24a9pyzkw5qqqqqqqqqqqqqqpysp5qypqxpq9qcrsszg2pvxq6rs0zqg3yyc5z5tpwxqergd3c8g7rusq9qypqsq0jncr5msemdshhhjquzjmtxa4muw3zptgquhfmfahc9ssdu5l7jnxg3j0j7m4694kc49dt9dfxyzz9qd7zpj3jm6r0tkfjujlzz5j0gpkq56cc'
 
 print(bolt11.decode(invoice))
